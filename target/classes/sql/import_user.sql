@@ -1,0 +1,2 @@
+INSERT INTO user (`_id`, `user_name`, `password`, `first_name`, `last_name`, `contact_number`, `reg_code`, `role`, `linkedin_url`, `years_of_experience`, `active`, `confirmed_signup`, `reset_password`, `reset_password_date`) 
+	VALUES (1, 'mulder', '123456', 'Fox', 'Mulder', 10, 'US', 'Agent', null, 20, true, true, false, null);
