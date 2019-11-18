@@ -1,0 +1,21 @@
+server:
+  port: 9000   #端口号
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: gateway-zuul   #在注册中心显示的名字
+
+zuul:
+  routes:
+    api: # 随便起
+      path: /fsd/** #访问地址以service请求的都会转发到service-provider-A
+      serviceId: fsd-common # 如果两个服务名都是以service-provider-A注册到eureka，zuul会随机转发
